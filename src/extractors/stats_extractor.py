@@ -1,9 +1,10 @@
 import requests
 from loguru import logger
-from config.settings import RAPIDAPI_KEY, API_HOST, BASE_URL, LEAGUE_ID, SEASON
+from config.settings import API_FOOTBALL_KEY, API_HOST, BASE_URL, LEAGUE_ID, SEASON
+from typing import Optional
 
 
-def get_player_stats(player_id: int) -> dict | None:
+def get_player_stats(player_id: int) -> Optional[dict]:
     """
     Fetches statistics for a single player.
 
@@ -16,7 +17,7 @@ def get_player_stats(player_id: int) -> dict | None:
     url = f"{BASE_URL}/players"
 
     headers = {
-        "x-apisports-key": RAPIDAPI_KEY,
+        "x-apisports-key": API_FOOTBALL_KEY,
         "x-apisports-host": API_HOST,
     }
 
