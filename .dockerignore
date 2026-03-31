@@ -1,0 +1,25 @@
+
+```
+
+Paste this inside:
+```
+# Secrets — never bake into image
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+
+# Logs
+logs/
+
+# Git
+.git/
+.gitignore
+
+# Dev files
+test_*.py
+README.md
